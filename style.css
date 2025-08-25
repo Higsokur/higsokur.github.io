@@ -1,15 +1,17 @@
 body {
     margin: 0px;
+    height: 200vh;
 
     background-image: url("./src/canadaforest.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 div#center {
     position: absolute;
     height: 10%;
-    width: 20%;
+    width: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -20,7 +22,7 @@ div#center {
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
 }
-div > img {
+div#center > img {
     height: 80%;
 
     border-radius: 10px;
@@ -28,7 +30,7 @@ div > img {
     box-shadow: 2px 2px 4px #000000;
 
 }
-div > h1 {
+div#center > h1 {
     font-family: monospace;
     text-shadow: 2px 2px 4px #000000;
 
@@ -36,7 +38,7 @@ div > h1 {
 
     padding-left: 10px;
 }
-div > img, div > h1 {
+div#center > img, div#center > h1 {
     vertical-align: middle;
     display: inline-block;
 }
@@ -46,11 +48,39 @@ p#scrolldown {
     color: white;
 
     position: fixed;
-    top: 95%;
+    top: calc(100vh - 50px);
     left: 50%;
     transform: translate(-50%, 0%);
 
     animation: fadein 8s ease-in-out 0s 1 normal, scrolldownbounce 1s ease-in-out 0s infinite alternate;
+}
+
+div#aboutme {
+    position: absolute;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    margin: 20px;
+    top: 100%;
+}
+
+div#aboutme > div {
+    height: 100%;
+    width: calc(50vw - 10px);
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+div#aboutme > div > div {
+    height: 40px;
+    width: 100%;
+}
+
+div#aboutme > div > iframe {
+    height: calc(100% - 44px);
+    width: calc(100% - 10px);
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 @keyframes fadein {
@@ -59,6 +89,6 @@ p#scrolldown {
 }
 
 @keyframes scrolldownbounce {
-    0% {transform: translate(-50%, -50%);}
-    100% {transform: translate(-50%, 50%);}
+    0% {transform: translate(-50%, -100%);}
+    100% {transform: translate(-50%, 0%);}
 }

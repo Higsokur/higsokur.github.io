@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+    background-image: url("src/canadaforest.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+div#center {
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+div > img {
+    height: 80%;
+    border-radius: 10px;
+    border: 4px solid #336142;
+    box-shadow: 2px 2px 4px #000000;
+
+}
+div > h1 {
+    font-family: monospace;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    padding-left: 10px;
+}
+div > img, div > h1 {
+    vertical-align: middle;
+    display: inline-block;
+}

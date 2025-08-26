@@ -7,6 +7,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
+    color: white;
+    font-family: monospace;
 }
 div#center {
     position: absolute;
@@ -26,15 +28,12 @@ div#center > img {
     height: 80%;
 
     border-radius: 10px;
-    border: 4px solid #336142;
-    box-shadow: 2px 2px 4px #000000;
-
+    border: 2px solid white;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.5);
 }
-div#center > h1 {
-    font-family: monospace;
-    text-shadow: 2px 2px 4px #000000;
 
-    color: white;
+div#center > h1 {
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
 
     padding-left: 10px;
 }
@@ -44,10 +43,7 @@ div#center > img, div#center > h1 {
 }
 
 p#scrolldown {
-    font-family: monospace;
-    color: white;
-
-    position: fixed;
+    position: absolute;
     top: calc(100vh - 50px);
     left: 50%;
     transform: translate(-50%, 0%);
@@ -57,18 +53,24 @@ p#scrolldown {
 
 div#aboutme {
     position: absolute;
+    top: 100%;
+
     width: calc(100vw - 40px);
     height: calc(100vh - 40px);
+
     margin: 20px;
-    top: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
 }
 
 div#aboutme > iframe {
-    height: calc(100% - 4px);
-    width: calc(50vw - 14px);
+    height: 100%;
+    width: calc(50vw - 50px);
+    margin-right: 20px;
 
     background-color: white;
-    box-shadow: 2px 2px 4px black;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.5);
 
     border-radius: 10px;
     border: 2px solid #EEEEEE;
@@ -76,6 +78,28 @@ div#aboutme > iframe {
     transition: border 0.5s;
 }
 div#aboutme > iframe:hover {border: 2px solid black}
+
+div#aboutme > h1 {
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    animation: socialsbounce 1s ease-in-out 0s infinite alternate;
+}
+
+div#aboutme > div {
+    height: 10vh;
+    width: calc(50vw - 50px);
+
+    background-color: white;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.5);
+
+    border-radius: 10px;
+    border: 2px solid #EEEEEE;
+
+    margin-bottom: 20px;
+    overflow-x: auto;
+
+    transition: border 0.5s;
+}
+div#aboutme > div:hover {border: 2px solid black}
 
 @keyframes fadein {
     0% {opacity:0;}
@@ -85,4 +109,8 @@ div#aboutme > iframe:hover {border: 2px solid black}
 @keyframes scrolldownbounce {
     0% {transform: translate(-50%, -100%);}
     100% {transform: translate(-50%, 0%);}
+}
+@keyframes socialsbounce {
+    0% {transform: translate(0%, -25%);}
+    100% {transform: translate(0%, 25%);}
 }

@@ -140,6 +140,16 @@ div#skills {
 div#skills > h1 {
     width: 100%;
     height: 32px;
+
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    animation: socialsbounce 1s ease-in-out 0s infinite alternate;
+}
+div#skills > h2 {
+    width: 50%;
+    height: 32px;
+
+    margin: 0px;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
 }
 
 div#skills > div {
@@ -147,18 +157,22 @@ div#skills > div {
     height: 60%;
     margin: 20px;
 
-    background-color: black;
-
     display: flex;
     flex-flow: row wrap;
+
 }
 
 div#skills > div > div {
     width: 100%;
-    height: 20%;
+    height: 10vh;
 
     background-color: #121212;
     border: 1px solid black;
+
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.5);
+
+    display: flex;
+    flex-flow: row wrap;
 }
 
 div#skills > div > div > div {
@@ -170,6 +184,15 @@ div#skills > div > div > div {
     align-items: center;
 
     color: black;
+}
+
+div#skills > div > div > img {
+    height: calc(100% - 10px);
+    margin: 5px;
+}
+
+div#skills > p {
+    width: 100%;
 }
 
 @keyframes fadein {

@@ -68,7 +68,7 @@ div#aboutme {
     text-align: center;
 }
 
-div#aboutme > iframe {
+div#aboutme > iframe {  /* aboutme.html iframe */
     height: 100%;
     width: 50%;
 
@@ -87,7 +87,7 @@ div#aboutme > h1 {
     animation: socialsbounce 1s ease-in-out 0s infinite alternate;
 }
 
-div#aboutme > a {
+div#aboutme > a { /* Socials/Connections pannels */
     height: 10vh;
     width: calc(50% - 20px);
 
@@ -107,23 +107,23 @@ div#aboutme > a {
 }
 div#aboutme > a:hover {border: 2px solid black}
 
-div#aboutme > a > img {
+div#aboutme > a > img { /* Socials/Connections image */
     height: 100%;
     padding: 1vh 0px 1vh 0px;
 }
 
-div#aboutme > a > h1 {
+div#aboutme > a > h1 { /* Socials/Connections text */
     padding-left: 20px;
     text-decoration: none;
     color: black;
 }
 
-div#aboutme > a > img, div#aboutme > a > h1 {
+div#aboutme > a > img, div#aboutme > a > h1 {  /* Socials/Connections image and text */
     vertical-align: middle;
     display: inline-block;
 }
 
-div#skills, div#projects {
+div#skills, div#projects {  /* skills and projects section have similar css so we grouped them together here */
     position: absolute;
     top:200%;
 
@@ -143,7 +143,7 @@ div#skills > h1, div#projects > h1 {
     text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
     animation: socialsbounce 1s ease-in-out 0s infinite alternate;
 }
-div#skills > h2 {
+.tierTitle {
     width: 50%;
     height: 32px;
 
@@ -161,7 +161,7 @@ div#skills > div {
 
 }
 
-div#skills > div > div {
+.tierColumn {
     width: 100%;
     height: 10vh;
 
@@ -174,7 +174,7 @@ div#skills > div > div {
     flex-flow: row wrap;
 }
 
-div#skills > div > div > div {
+.tier {
     width: 15%;
     height: 100%;
 
@@ -185,22 +185,35 @@ div#skills > div > div > div {
     color: black;
 }
 
-div#skills > div > div > img {
+.tierColumn > img {
     height: calc(100% - 10px);
     margin: 5px;
 }
 
-div#skills > p {
+div#skills > p, div#projects > p {width: 100%;}
+
+div#projects {top: 300% !important;} /* override the top 200% with 300% for the projects section */
+
+div#footer {
+    position: absolute;
     width: 100%;
+    top: 400%;
+
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+
+    padding: 10px;
 }
 
-div#projects {
-    top: 300% !important;
+div#footer > h3, div#footer > a {
+    width: 100%;
+    color: white;
 }
 
-div#projects > p {
-    width: 100%;
-}
+div#footer > h3 {text-shadow: 3px 3px 0px rgba(0,0,0,0.5);}
+
+/* Animations below */
 
 @keyframes fadein {
     0% {opacity:0;}

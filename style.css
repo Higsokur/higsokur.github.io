@@ -134,6 +134,7 @@ div#skills, div#projects {  /* skills and projects section have similar css so w
     flex-flow: row wrap;
     text-align: center;
     align-content: center;
+    justify-content: center;
 }
 
 div#skills > h1, div#projects > h1 {
@@ -190,9 +191,26 @@ div#skills > div {
     margin: 5px;
 }
 
-div#skills > p, div#projects > p {width: 100%;}
+div#skills > p, div#projects > p {width: 100%;} /* div#skills > p is temporay */
 
 div#projects {top: 300% !important;} /* override the top 200% with 300% for the projects section */
+
+/* template
+.project {
+    height: 20vw; vw intended
+    width: 15vw;
+
+    margin: 20px;
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+
+.project > h1, .project > p {color: black;}
+
+*/
 
 div#footer {
     position: absolute;

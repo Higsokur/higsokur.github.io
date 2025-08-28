@@ -16,6 +16,8 @@ body {
 #greeting {
     height: 100vh;
     width: 100%;
+
+    text-align: center;
 }
 div#center {
     position: absolute;
@@ -51,6 +53,7 @@ div#center > img, div#center > h1 {
 
 p#scrolldown {
     position: absolute;
+    width: 100%;
     top: calc(100vh - 50px);
     left: 50%;
     transform: translate(-50%, 0%);
@@ -157,7 +160,6 @@ div#skills > div {
 
     display: flex;
     flex-flow: row wrap;
-
 }
 
 .tierColumn {
@@ -178,6 +180,7 @@ div#skills > div {
     height: 100%;
 
     top:auto;
+    min-width: 100px;
 
     display: flex;
     justify-content: center;
@@ -262,4 +265,16 @@ div#footer > h3 {text-shadow: 3px 3px 0px rgba(0,0,0,0.5);}
         width: 100%;
     }
 
+    @keyframes scrolldownbounce {
+        0% {transform: translate(-50%, -25%);}
+        100% {transform: translate(-50%, 0%);}
+    }
+    @keyframes socialsbounce {
+        0% {transform: translate(0%, -10%);}
+        100% {transform: translate(0%,10%);}
+    }
+
+    #second{
+        order: 1;
+    }
 }

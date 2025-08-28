@@ -248,6 +248,7 @@ div#footer > h3 {text-shadow: 3px 3px 0px rgba(0,0,0,0.5);}
         flex-flow: row wrap;
         align-items: center;
         min-height: 100vh;
+        height: auto;
     }
     div#aboutme > iframe {
         height: 500px;

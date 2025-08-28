@@ -13,6 +13,10 @@ body {
     color: white;
     font-family: monospace;
 }
+#greeting {
+    height: 100vh;
+    width: 100%;
+}
 div#center {
     position: absolute;
     height: 10%;
@@ -55,11 +59,8 @@ p#scrolldown {
 }
 
 div#aboutme {
-    position: absolute;
-    top: 100%;
-
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     padding: 20px;
 
@@ -69,7 +70,7 @@ div#aboutme {
 }
 
 div#aboutme > iframe {  /* aboutme.html iframe */
-    height: 100%;
+    height: 100vh;
     width: 50%;
 
     background-color: white;
@@ -124,11 +125,8 @@ div#aboutme > a > img, div#aboutme > a > h1 {  /* Socials/Connections image and 
 }
 
 div#skills, div#projects {  /* skills and projects section have similar css so we grouped them together here */
-    position: absolute;
-    top:200%;
-
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
 
     display: flex;
     flex-flow: row wrap;
@@ -179,6 +177,8 @@ div#skills > div {
     width: 15%;
     height: 100%;
 
+    top:auto;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,8 +192,6 @@ div#skills > div {
 }
 
 div#skills > p, div#projects > p {width: 100%;} /* div#skills > p is temporay */
-
-div#projects {top: 300% !important;} /* override the top 200% with 300% for the projects section */
 
 /* template
 .project {
@@ -213,9 +211,7 @@ div#projects {top: 300% !important;} /* override the top 200% with 300% for the 
 */
 
 div#footer {
-    position: absolute;
     width: 100%;
-    top: 400%;
 
     display: flex;
     flex-flow: row wrap;
@@ -245,4 +241,24 @@ div#footer > h3 {text-shadow: 3px 3px 0px rgba(0,0,0,0.5);}
 @keyframes socialsbounce {
     0% {transform: translate(0%, -25%);}
     100% {transform: translate(0%, 25%);}
+}
+
+@media only screen and (max-width: 900px) {
+    div#aboutme {
+        flex-flow: row wrap;
+        align-items: center;
+        min-height: 100vh;
+    }
+    div#aboutme > iframe {
+        height: 500px;
+        width: 100%;
+    }
+    div#aboutme > a, div#aboutme > h1{
+        width: 100%;
+    }
+
+    div#skills > div {
+        width: 100%;
+    }
+
 }
